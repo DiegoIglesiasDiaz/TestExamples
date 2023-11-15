@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RunSettings>
+	<!-- Folder in which test results is going to be saved-->
+	<RunConfiguration>
+		<ResultsDirectory>./TestResults</ResultsDirectory>
+	</RunConfiguration>
+	<TestRunParameters>
+		<Parameter name="GoodFileName" value="[AppDataPath]\TestFile.txt"/>
+		<Parameter name="BadFileName" value="C:\NotExists.txt"/>
+		<Parameter name="EmptyFileFailMsg" value="The Call to the FileExists() method did not thorw an ArgumentNullException and it should have"/>
+		<Parameter name="EmptyFileMsg" value="Checking for empty files"/>
+	</TestRunParameters>
+	<!-- Configure Logging settings -->
+	<LoggerRunSettings>
+		<Loggers>
+			<Logger friendlyName="console" enabled="True">
+				<Configuration>
+					<Verbosity>quiet</Verbosity>
+				</Configuration>
+			</Logger>
+			<Logger friendlyName="trx" enabled="True">
+				<Configuration>
+					<LogFileName>MyClasses.trx</LogFileName>
+				</Configuration>
+			</Logger>
+			<Logger friendlyName="html" enabled="True">
+				<Configuration>
+					<LogFileName>MyClasses.html</LogFileName>
+				</Configuration>
+			</Logger>
+		</Loggers>
+	</LoggerRunSettings>
+</RunSettings>
